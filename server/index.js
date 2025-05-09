@@ -908,39 +908,32 @@ app.get('/addfaculty', IsAuth, (req, res) => {
   res.status(200).json({send : header_marquee_data, header_marquee_data});
 });
 
-app.post('/addfaculty', (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const psw = req.body.psw;
-  const department = req.body.dept;
-  const designation = req.body.designation;
-  const userType = req.body.userType;
+app.post('/addfaculty', upload.none(), (req, res) => {
+  const { name, email, psw, dept, designation, userType } = req.body;
 
-  // Insert data into the user table
+  if (!email || !psw || !userType) {
+    return res.status(400).json({ error: "Missing required fields" });
+  }
+
   const insertUserQuery = 'INSERT INTO railway.user (Id, Pass, UserType) VALUES (?, ?, ?)';
-  connection.query(insertUserQuery, [email, psw, userType], (err, result) => {
+  connection.query(insertUserQuery, [email, psw, userType], (err) => {
     if (err) {
       console.error('Error inserting user data:', err);
-      res.status(500).json({ error: 'An error occurred while registering faculty.' });
-      return;
+      return res.status(500).json({ error: 'An error occurred while registering faculty.' });
     }
-    console.log('User registered successfully');
 
-    // Insert data into the faculty table using the retrieved user ID
     const insertFacultyQuery = 'INSERT INTO railway.faculty (Id, Name, Department, Designation) VALUES (?, ?, ?, ?)';
-    connection.query(insertFacultyQuery, [email, name, department, designation], (err, result) => {
+    connection.query(insertFacultyQuery, [email, name, dept, designation], (err) => {
       if (err) {
         console.error('Error inserting faculty data:', err);
-        res.status(500).json({ error: 'An error occurred while saving faculty data.' });
-        return;
+        return res.status(500).json({ error: 'An error occurred while saving faculty data.' });
       }
 
-      console.log('Faculty data saved successfully');
-      //res.redirect('/addfaculty');
-      res.status(200);
+      return res.status(200).json({ message: 'Faculty added successfully' });
     });
   });
 });
+
 
 
 

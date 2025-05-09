@@ -33,14 +33,7 @@ const ViewAlumni = () => {
     <div className="view-alumni-container">
       <h2 className="page-title">Alumni List</h2>
       <div className="content-row">
-        <div className="sidebar">
-          <a href="/viewNews">View News</a>
-          <a href="/uploadNews">Upload News</a>
-          <a href="/viewalumni">View Alumni</a>
-          <a href="/addfaculty">Add Faculty</a>
-          <a href="/facultylist">View Faculty</a>
-          <a href="/logout">Logout</a>
-        </div>
+      
 
         <div className="main-content">
           {alumni.length > 0 ? (
