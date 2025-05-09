@@ -1,0 +1,132 @@
+.carousal {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+  .carousel-wrapper {
+    overflow: hidden;
+  }
+  .carouselBox {
+    display: flex;
+    position: relative;
+  }
+  .carousel__photo {
+    width: 100%;
+    object-fit: cover;
+  }
+  .carousel__button--next,
+  .carousel__button--prev {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .carousel__button--next {
+    right: 10px;
+  }
+  .carousel__button--prev {
+    left: 10px;
+  }
+  .extraInfo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .profileCard {
+    display: flex;
+    align-items: center;
+  }
+  .logo1 {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .name {
+    font-weight: bold;
+  }
+  .desg {
+    font-size: 14px;
+    color: #666;
+  }
+  .bg-section {
+    background-image: url('../../images/back.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    padding: 20px;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .container3 {
+    display: flex;
+    gap: 20px;
+  }
+  .items {
+    flex: 1;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .items-head p {
+    font-weight: bold;
+  }
+  .read-more {
+    float: right;
+    text-decoration: none;
+    color: rgb(173, 46, 0);
+    background-color: #f6931d;
+    border-radius: 30px;
+    padding: 5px 10px;
+  }
+  .services {
+    padding: 40px 20px;
+  }
+  .tabs {
+    display: flex;
+    gap: 10px;
+  }
+  .tab {
+    padding: 10px 20px;
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .activeTab {
+    background-color: #f6931d;
+    color: white;
+  }
+  .btnsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .btnsGrid span {
+    width: 120px;
+    text-align: center;
+  }
+  .btnsGrid img {
+    width: 100%;
+    max-width: 60px;
+  }
+  .hidden {
+    display: none;
+  }
+  .course {
+    margin-top: 30px;
+  }
+  .modal {
+    position: absolute;
+    z-index: 10040;
+    overflow-y: auto;
+  }
+  
