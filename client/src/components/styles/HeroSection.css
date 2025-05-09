@@ -54,7 +54,7 @@
     color: #666;
   }
   .bg-section {
-    background-image: url('../../images/back.jpg');
+    background-image: url('../../images/back.webp');
     background-size: cover;
     background-attachment: fixed;
     color: white;
