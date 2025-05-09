@@ -1,142 +1,126 @@
-/* Main footer styles */
-.footer {
-  font-family: 'Roboto', Arial, sans-serif;
-  color: #ffffff;
-  /* Remove any bottom margin */
-  margin: 0; /* Changed from margin-bottom to remove all margins */
-  /* This ensures the footer extends to the edges of its container */
-  width: 100%;
-  /* Added to ensure no spacing issues */
-  margin-top: 1.2rem;
-  position: relative;
-  /* Remove any padding */
-  padding: 0;
-  box-sizing: border-box;
+.footer { 
+  background-color: #20263e; /* Dark navy */
+  color: #f8f9fa; /* Light text */
+  padding: 40px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.1;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 0 20px;
 }
 
-/* Top section with columns */
 .footer-top {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-/* Footer headings */
-/* Footer headings */
-.footer-heading {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  text-align: left; /* Ensures the heading text is left aligned */
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  position: relative;
-}
-
-
-/* Subheadings */
-.footer-subheading {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-/* List styling */
-.footer-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-list li {
-  margin-bottom: 0.75rem;
-}
-
-.footer-list li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #444;
+  padding-bottom: 30px;
 }
 
-.footer-list li a:hover {
-  color: #ffe0c4;
+.footer-column {
+  flex: 1 1 200px;
+  margin: 20px;
+  min-width: 220px;
 }
 
-.footer-list-dot {
+.footer-logo img {
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: inline-block;
-  width: 5px;
-  height: 5px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  margin-right: 10px;
+  margin-left: 0;
+  margin-right: 100px;
+  margin-bottom: 10px;
 }
 
-/* Contact info */
-.footer-contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.footer-contact-item {
-  display: flex;
-  align-items: flex-start;
-}
-
-.footer-icon {
-  margin-right: 10px;
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  margin-top: 3px;
-}
-
-.footer-contact-item p,
-.footer-contact-item a {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.footer-contact-item a {
+.footer-column h3 {
+  font-size: 1.5rem;
   color: #ffffff;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 8px;
+  display: block;
+  text-align: left;
+}
+
+.footer-column h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* full underline */
+  height: 2px;
+  background-color: #f26922;
+  text-align: left;
+}
+
+.footer-column ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+  color: #b15f0c;
+  text-align: left;
+}
+
+.footer-column ul li a {
+  color: #dee2e6;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-contact-item a:hover {
-  color: #ffe0c4;
+.footer-column ul li a:hover {
+  color: #f26922;
 }
 
-/* Social icons */
+.footer-contact-info {
+  font-style: normal;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.footer-contact-info a {
+  color: #f26922;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-info a:hover {
+  color: #ffa559;
+}
+
+/* SOCIAL ICON SECTION */
 .footer-social {
-  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start; /* Options: flex-start, center, flex-end */
+  align-items: center;
+  margin-top: 20px;
 }
 
 .footer-social-icons {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .footer-social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 40px;
   height: 40px;
   background-color: #ffffff;
   color: #f26922;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .footer-social-icon:hover {
@@ -144,256 +128,107 @@
   transform: translateY(-3px);
 }
 
-/* Newsletter form */
-.footer-newsletter {
-  margin-top: 1.5rem;
-}
-
-.footer-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-input {
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.95rem;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.footer-button {
-  padding: 0.75rem 1.5rem;
-  background-color: #ffffff;
-  color: #f26922;
-  border: none;
-  border-radius: 4px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.footer-button:hover {
-  background-color: #ffe0c4;
-}
-
-/* CTA section */
-.footer-cta {
-  background-color: #e45a11;
-  padding: 2.5rem 1.5rem;
-}
-
-.footer-cta-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.footer-cta-text h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-}
-
-.footer-cta-text p {
-  font-size: 1.1rem;
-  margin: 0;
-  opacity: 0.9;
-}
-
-.footer-cta-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.footer-cta-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-weight: 700;
-  text-decoration: none;
-  text-align: center;
-  min-width: 150px;
-  transition: all 0.3s ease;
-}
-
-.footer-cta-primary {
-  background-color: #ffffff;
-  color: #f26922;
-}
-
-.footer-cta-primary:hover {
-  background-color: #ffe0c4;
-  transform: translateY(-3px);
-}
-
-.footer-cta-secondary {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-}
-
-.footer-cta-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
-}
-
-/* Bottom section */
+/* Bottom copyright */
 .footer-bottom {
-  background-color:  #0A3153;
-  padding: 1.5rem;
-  /* Remove any bottom margin and padding */
-  margin: 0; /* Changed from margin-bottom to remove all margins */
-  padding-bottom: 1.5rem;
-  /* Ensure it's flush with the bottom */
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  /* Ensure no left or right padding */
-  padding-left: 0;
-  padding-right: 0;
-  box-sizing: border-box;
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #444;
 }
 
-.footer-bottom-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.footer-bottom p {
+  font-size: 13px;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Useful Links Section */
+.footer-link-columns {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 1rem;
-  /* Add some padding to keep content from touching the edges */
-  padding: 0 1.5rem;
 }
 
-.footer-copyright {
+.footer-link-columns ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 20px;
   margin: 0;
-  font-size: 0.9rem;
 }
 
-.footer-bottom-links {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+.footer-link-columns ul li {
+  margin-bottom: 8px;
 }
 
-.footer-bottom-links a {
-  color: #ffffff;
+.footer-link-columns ul li a {
+  color: #dee2e6;
   text-decoration: none;
-  font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
-.footer-bottom-links a:hover {
-  color: #ffe0c4;
-}
-.footer-credit {
-  text-align: center;
-  padding: 1rem 0;
-  background-color: #0A3153; /* or adjust background color */
-  color: #fff;
-  font-size: 0.9rem;
+.footer-link-columns ul li a:hover {
+  color: #f26922;
 }
 
-.footer-credit p {
-  margin: 0;
-}
-
-/* Gradient background */
-footer {
-  background: linear-gradient(to right, #0A3153, #0A3153);
-  /* Ensure no margin or padding at the bottom */
-  margin: 0; /* Changed from margin-bottom to remove all margins */
-  padding: 0; /* Changed from padding-bottom to remove all padding */
-  /* Ensure footer sticks to the bottom */
-  position: relative;
-  /* Ensure full width */
-  width: 100%;
-  box-sizing: border-box;
-  left: 0;
-  right: 0;
-}
-
-/* Responsive styles */
+/* Optional: If you want to make the links' columns responsive */
 @media (max-width: 768px) {
   .footer-top {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-cta-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
-  
-  .footer-bottom-container {
-    flex-direction: column;
+
+  .footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* full underline */
+    height: 2px;
+    background-color: #f26922;
+    text-align: left;
+  }
+
+  .footer-column {
+    width: 90%;
     text-align: center;
   }
-  
-  .footer-bottom-links {
+
+  .footer-column ul {
+    padding-left: 1.2rem;
+    text-align: left;
+  }
+
+  .footer-column h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+  }
+
+  .footer-contact-info {
+    text-align: center;
+  }
+
+  .footer-social {
     justify-content: center;
   }
-  
-  .footer-form {
-    flex-direction: column;
-  }
-  
-  .footer-cta-buttons {
-    width: 100%;
-  }
-  
-  .footer-cta-button {
-    width: 100%;
-  }
-}
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .footer-top {
-    grid-template-columns: repeat(2, 1fr);
+  .footer-column ul li {
+    text-align: left;
   }
-}
 
-@media (min-width: 576px) {
-  .footer-form {
-    flex-direction: row;
+  .footer-logo img {
+    margin-right: 0px;
   }
-  
-  .footer-input {
-    border-radius: 4px 0 0 4px;
-    flex: 1;
+
+  .footer-column h3 {
+    text-align: center;
   }
-  
-  .footer-button {
-    border-radius: 0 4px 4px 0;
+
+  .footer-column ul li {
+    text-align: center;
   }
-}
 
-/* Add this to ensure the body itself doesn't have margins */
-html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Make footer stick to bottom if content is short */
-#root, .app-container, #app, main {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-footer {
-  margin-top: auto;
+  .footer-link-columns {
+    align-items: center;
+  }
 }
