@@ -3,8 +3,8 @@ import './App.css';
 import HeroSection from './components/HeroSection';
 import Footer from './components/Footer';
 import Login from './components/Login';
-import AdminDashboard from './components/AdminDashboard';
-import ViewNews from './components/ViewNews';
+import AdminDashboard from './components/admin/AdminDashboard';
+import ViewNews from './components/admin/ViewNews';
 function App() {
   return (
     <Router>
@@ -13,7 +13,9 @@ function App() {
           <Route path="/" element={<HeroSection />} />
            <Route path="/login" element={<Login />} />
             <Route path="/AdminDashboard" element={<AdminDashboard/>} />
-             <Route path="/viewNews" element={<ViewNews />} />
+            <Route path="/viewNews" element={<ViewNews />} />
+             <Route path="/viewalumni" element={<ViewNews />} />
+
         </Routes>
         <Footer />
       </div>
