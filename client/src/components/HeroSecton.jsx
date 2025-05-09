@@ -44,8 +44,8 @@ const HeroSection = () => {
       <div className="bg-section">
         <div className="section-title">NEWS & EVENTS</div>
         <div className="container3">
-          {/* <NewsSection />
-          <EventSection /> */}
+          <NewsSection />
+          <EventSection />
         </div>
       </div>
 
@@ -58,12 +58,12 @@ const HeroSection = () => {
             D.A.V. Degree College established in 1970... (static text continues)
           </div>
         </div>
-        {/* <ServiceTabs /> */}
+        <ServiceTabs />
       </div>
 
       <div className="bg-section">
         <div className="section-title">OUR COURSES</div>
-        {/* <CourseGrid /> */}
+        <CourseGrid />
       </div>
 
       <div className="modal" id="myModal">
