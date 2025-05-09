@@ -1,0 +1,44 @@
+
+.head_title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+}
+
+.page_content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: #222;
+}
+
+.page_content h4 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+.page_content ol,
+.page_content ul {
+  padding-left: 20px;
+}
+
+.page_content li {
+  margin-bottom: 10px;
+}
+
+.page_content b {
+  color: #000;
+}
+
+.page_content div {
+  margin-top: 15px;
+}
