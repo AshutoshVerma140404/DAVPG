@@ -64,7 +64,18 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>
           Official Website of DAVPG College Gorakhpur | Best viewed in 1366×768 resolution. <br />
-          © {new Date().getFullYear()} DAVPGC | Terms & Conditions | Privacy Policy | Powered by Bludgers
+          © {new Date().getFullYear()} DAVPGC | Terms & Conditions | Privacy Policy | <br/>
+          <br/>Powered by 
+        <a
+  href="https://bludgers.vercel.app/"
+  style={{ color: '#e2f3ca', textDecoration: 'none' }}
+  onMouseOver={(e) => (e.target.style.color = 'white')}
+  onMouseOut={(e) => (e.target.style.color = '#24342')}
+>
+ - Bludgers
+</a>
+
+
         </p>
       </div>
     </footer>

@@ -34,9 +34,13 @@ export default function Login() {
       const data = await res.json();
       
       if (res.ok) {
-        // Store user info in localStorage or context if needed
-        // localStorage.setItem('user', JSON.stringify(data.user));
-        navigate('/AdminDashboard');
+        if(data.userType === 'admin') {
+          navigate('/AdminDashboard');
+          
+
+        }
+        else
+        navigate('/FacultyDashboard');
       } else {
         setError(data.message || 'Invalid username or password');
       }

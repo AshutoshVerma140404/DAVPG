@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import AdminDashboard from './components/admin/AdminDashboard';
 import ViewNews from './components/admin/ViewNews';
+import FacultyDashboard from './components/FacultyDashboard';
 function App() {
   return (
     <Router>
@@ -15,7 +16,7 @@ function App() {
             <Route path="/AdminDashboard" element={<AdminDashboard/>} />
             <Route path="/viewNews" element={<ViewNews />} />
              <Route path="/viewalumni" element={<ViewNews />} />
-
+              <Route path="/FacultyDashboard" element={<FacultyDashboard/>} />
         </Routes>
         <Footer />
       </div>

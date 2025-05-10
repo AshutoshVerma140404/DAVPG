@@ -7,11 +7,31 @@ import FacultyList from "./Facultylist";
 import { useNavigate } from "react-router-dom";
 import { LogOut, Router } from "lucide-react";
 import "./styles/AdminDashboard.css";
-
+import { useEffect } from "react";
 const AdminDashboard = () => {
   const [activeComponent, setActiveComponent] = useState("welcome");
   const navigate = useNavigate();
   // Function to render the appropriate component based on activeComponent state
+  
+
+useEffect(() => {
+  const verifySession = async () => {
+    try {
+      const res = await fetch("http://localhost:8000/checkAdminSession", {
+        credentials: "include"
+      });
+      if (!res.ok) {
+        navigate("/login"); // Redirect to login if not authenticated
+      }
+    } catch (err) {
+      console.error("Session check failed:", err);
+      navigate("/login");
+    }
+  };
+
+  verifySession();
+}, []);
+
   const renderComponent = () => {
     switch (activeComponent) {
       case "viewNews":
@@ -37,7 +57,7 @@ const handleLogout = async () => {
 
     if (res.ok) {
       console.log("Logout successful");
-      Router.clear(); // Clear any stored user data if needed
+      //Router.clear(); // Clear any stored user data if needed
       navigate("/"); // Or use window.location.href = "/" if needed
     } else {
       console.error("Logout failed", res.status);
