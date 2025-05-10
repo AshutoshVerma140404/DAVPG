@@ -1,0 +1,44 @@
+/* AlumniAssoc.css */
+
+.head_title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+}
+
+.page_content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.alumni_table {
+  width: 70%;
+  border-collapse: collapse;
+  background-color: #fefefe;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.alumni_table th,
+.alumni_table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.alumni_table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.alumni_table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.alumni_table th {
+  background-color: #e0e0e0;
+  color: #000;
+  font-weight: 600;
+}
