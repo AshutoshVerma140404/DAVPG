@@ -122,69 +122,78 @@ const HeroSection = () => {
             <div className="carousel__button--prev" onClick={prevSlide}></div>
           </div>
         </div>
-        <div className="extraInfo">
-          <div className="profileCard">
-            <div className="logo1" style={{ backgroundImage: `url(${p2})` }}></div>
-            <div className="info">
-              <div className="name">Ranvir Shanker</div>
-              <div className="desg">Manager</div>
-            </div>
-          </div>
-          <div className="profileCard">
-            <div className="logo1" style={{ backgroundImage: `url(${p4})` }}></div>
-            <div className="info">
-              <div className="name">Prof. Shail Pande</div>
-              <div className="desg">Principal</div>
-            </div>
-          </div>
-        </div>
+    
       </div>
 
       {/* News & Events */}
-      <div className="news-events-section" style={{ backgroundImage: `url(${backImg})` }}>
-        <div className="section-title"><h1>NEWS & EVENTS</h1></div>
-        <div className="container3">
-          <div className="items">
-            <div className="items-head">
-              <p>Latest News</p>
-              <hr />
-            </div>
-            
-            <div className="items-body">
-              <div className="marquee-container">
-                {newsAndEvents.news.map((item, index) => (
-                  <a key={index} href={item.Link ? `/docs/${item.Link}` : "#"} target="_blank" rel="noopener noreferrer">
-                    <div className="items-body-content">
-                      <span><img src={newIcon} alt="new" /> {item.Title}</span>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-            <a href="/viewallnews" className="read-more">Read more</a>
-          </div>
-          <div className="items">
-            <div className="items-head">
-              <p>Events/News Coverage</p>
-              <hr />
-            </div>
-            <div className="items-body">
-              <div className="marquee-container">
-                {newsAndEvents.events.map((item, index) => (
-                  <a key={index} href={item.Link ? `/docs/${item.Link}` : "#"} target="_blank" rel="noopener noreferrer">
-                    <div className="items-body-content">
-                      <span><img src="../images/new.webp" alt="new" /> {item.Title}</span>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-            <a href="/viewallevent" className="read-more">Read more</a>
-          </div>
-        </div>
-      </div>
+<div className="news-events-section" style={{ backgroundImage: `url(${backImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+ <div className="news-events-wrapper">
+   {/* Left: Extra Info Column */}
+   <div className="hs-extraInfo">
+     <div className="hs-profileCard">
+       <div className="hs-avatar" style={{ backgroundImage: `url(${p2})` }}></div>
+       <div className="hs-textInfo">
+         <div className="hs-name">Ranvir Shanker</div>
+         <div className="hs-role">Manager</div>
+       </div>
+     </div>
+     <div className="hs-profileCard">
+       <div className="hs-avatar" style={{ backgroundImage: `url(${p4})` }}></div>
+       <div className="hs-textInfo">
+         <div className="hs-name">Prof. Shail Pande</div>
+         <div className="hs-role">Principal</div>
+       </div>
+     </div>
+   </div>
 
-      {/* About Us & Services */}
+   {/* Right: News + Events Columns */}
+   <div className="news-events-columns">
+     <div className="section-title">
+       <h1>NEWS & EVENTS</h1>
+     </div>
+     <div className="news-events-items-row">
+       <div className="items">
+         <div className="items-head">
+           <p>Latest News</p>
+           <hr />
+         </div>
+         <div className="items-body">
+           <div className="marquee-container">
+             {newsAndEvents.news.map((item, index) => (
+               <a key={index} href={item.Link ? `/docs/${item.Link}` : "#"} target="_blank" rel="noopener noreferrer">
+                 <div className="items-body-content">
+                   <span><img src={newIcon} alt="new" /> {item.Title}</span>
+                 </div>
+               </a>
+             ))}
+           </div>
+         </div>
+         <a href="/viewallnews" className="read-more">Read more</a>
+       </div>
+
+       <div className="items">
+         <div className="items-head">
+           <p>Events/News Coverage</p>
+           <hr />
+         </div>
+         <div className="items-body">
+           <div className="marquee-container">
+             {newsAndEvents.events.map((item, index) => (
+               <a key={index} href={item.Link ? `/docs/${item.Link}` : "#"} target="_blank" rel="noopener noreferrer">
+                 <div className="items-body-content">
+                   <span><img src="../images/new.webp" alt="new" /> {item.Title}</span>
+                 </div>
+               </a>
+             ))}
+           </div>
+         </div>
+         <a href="/viewallevent" className="read-more">Read more</a>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+     {/* About Us & Services */}
       <div className="services">
         <div className="about">
           <div className="tabs heading">
